@@ -11,6 +11,21 @@
         content="Macra_me.ua — авторські вироби з макраме ручної роботи. Сукні, панно, люстри, сумки та декор.">
 
   <style>
+    .photo-frame {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    background: #eee6de;
+    border-radius: 18px 18px 0 0;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
     .hero-photo img {
   width: 100%;
   height: 550px;  
@@ -592,17 +607,31 @@
 
           <p class="product-description">
             Можливе індивідуальне замовлення.
-          </p>
+          <div class="dress">
 
-          <div class="price">
-            від 2 500 грн
-          </div>
+    <div class="photo-frame">
+        <img src="dress1.jpg" alt="Бежевое платье макраме">
+    </div>
 
-          <a href="lustry.html" class="button">
-    Абажури макраме під замовлення
-</a>
+    <div class="dress-info">
+        <h3>Платье «Boho»</h3>
 
+        <p class="description">
+            Платье ручной работы из макраме.
+        </p>
+
+        <div class="price">
+            3 500 грн
         </div>
+
+        <a class="order"
+           href="https://www.instagram.com/macra_me.ua/"
+           target="_blank">
+            Заказать
+        </a>
+    </div>
+
+</div>
 
       </article>
 
