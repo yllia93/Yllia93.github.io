@@ -1,71 +1,857 @@
-<main>
-  <!-- ЗАГОЛОВОК КАТАЛОГА -->
-  <h1 id="catalog" style="text-align: center; margin: 40px 0 20px;">Каталог виробів</h1>
 
-  <!-- КАТЕГОРИЯ 1: ПАННО -->
-  <section class="category-section">
-    <h2 class="category-title">Макраме-панно</h2>
-    
-    <div class="cards-grid">
-      <!-- Карточка 1 -->
-      <a href="pannokrug.html" class="card-link">
-        <article class="card">
-          <div class="photo"><img src="panno1.jpg" alt="Панно кругле"></div>
-          <h3>Панно кругле «Коло»</h3>
-          <div class="price">від 1 900 грн</div>
-        </article>
-      </a>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Карточка 2 -->
-      <a href="pannokrug.html" class="card-link">
-        <article class="card">
-          <div class="photo"><img src="panno2.jpg" alt="Панно велике"></div>
-          <h3>Панно настінне велике</h3>
-          <div class="price">від 2 500 грн</div>
-        </article>
-      </a>
+  <title>Macra_me.ua | Макраме ручної роботи</title>
+
+  <meta name="description"
+        content="Macra_me.ua — авторські вироби з макраме ручної роботи. Сукні, панно, люстри, сумки та декор.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f1eb;
+      color: #51463e;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(245, 241, 235, 0.96);
+      border-bottom: 1px solid #ded3c8;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      color: #a67c52;
+    }
+
+    .logo span {
+      font-size: 18px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #a67c52;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      min-height: 650px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 25px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .small-title {
+      color: #a67c52;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 7vw, 85px);
+      line-height: 0.98;
+      font-weight: normal;
+      margin: 20px 0 30px;
+    }
+
+    .hero-text {
+      max-width: 520px;
+      color: #776c63;
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 28px;
+
+      background: #a67c52;
+      color: white;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+
+      transition: 0.25s;
+    }
+
+    .button:hover {
+      background: #8d6847;
+      transform: translateY(-2px);
+    }
+
+    .hero-photo {
+      height: 520px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.15),
+          rgba(166,124,82,0.2)
+        ),
+        #d8c6b5;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 25px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo::before {
+      content: "";
+      width: 370px;
+      height: 370px;
+
+      border: 2px solid rgba(255,255,255,0.65);
+      border-radius: 50%;
+
+      position: absolute;
+    }
+
+    .hero-photo span {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ---------- SECTIONS ---------- */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: 45px;
+      margin-top: 10px;
+    }
+
+    .section-description {
+      color: #82766c;
+      max-width: 600px;
+      margin: 15px auto;
+    }
+
+    /* ---------- PRODUCTS ---------- */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: #fbf8f3;
+      border: 1px solid #e3d8cd;
+      overflow: hidden;
+      transition: 0.25s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(80,60,40,0.08);
+    }
+
+    .product-photo {
+      height: 330px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(
+        145deg,
+        #e8ddd3,
+        #cbb7a5
+      );
+
+      color: rgba(255,255,255,0.8);
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+
+    .product:nth-child(2) .product-photo {
+      background: linear-gradient(
+        145deg,
+        #ddd6cf,
+        #b8aa9d
+      );
+    }
+
+    .product:nth-child(3) .product-photo {
+      background: linear-gradient(
+        145deg,
+        #e7ddd3,
+        #d0bda9
+      );
+    }
+
+    .product:nth-child(4) .product-photo {
+      background: linear-gradient(
+        145deg,
+        #d7c8b8,
+        #b39a82
+      );
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-name {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .product-description {
+      color: #83766b;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #a67c52;
+      font-weight: bold;
+    }
+
+    .order-button {
+      display: block;
+      margin-top: 15px;
+
+      padding: 11px;
+      text-align: center;
+      border: 1px solid #bda994;
+      color: #8f6c4c;
+
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .order-button:hover {
+      background: #a67c52;
+      color: white;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+      background: #e7dcd2;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-photo {
+      height: 450px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #bda78f,
+          #e3d5c8
+        );
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: rgba(255,255,255,0.7);
+      font-family: Georgia, serif;
+      font-size: 35px;
+    }
+
+    .about-text p {
+      margin-top: 20px;
+      color: #70655c;
+    }
+
+    .advantages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .advantage {
+      background: rgba(255,255,255,0.45);
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    .advantage strong {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #8e6b4b;
+    }
+
+    /* ---------- INSTAGRAM ---------- */
+
+    .instagram {
+      text-align: center;
+    }
+
+    .instagram-button {
+      display: inline-block;
+      margin-top: 25px;
+
+      padding: 15px 30px;
+
+      border: 1px solid #a67c52;
+      color: #a67c52;
+    }
+
+    .instagram-button:hover {
+      background: #a67c52;
+      color: white;
+    }
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 15px auto;
+      color: #776b62;
+    }
+
+    .contacts {
+      margin-top: 30px;
+
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-button {
+      padding: 13px 25px;
+      border: 1px solid #c6b4a3;
+      font-size: 13px;
+    }
+
+    .contact-button:hover {
+      background: #a67c52;
+      color: white;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      padding: 30px 25px;
+      border-top: 1px solid #ded3c8;
+      text-align: center;
+      color: #8a7d72;
+      font-size: 12px;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+      }
+
+      .hero-photo {
+        height: 350px;
+        order: -1;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      h1 {
+        font-size: 52px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .advantages {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+
+      .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .header-inner {
+        padding: 16px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="header-inner">
+
+    <a href="#" class="logo">
+      Macra_me.ua 🐚
+    </a>
+
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#about">Про бренд</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div>
+
+    <div class="small-title">
+      handmade · boho · macramé
     </div>
-  </section>
 
-  <!-- КАТЕГОРИЯ 2: ЛЮСТРЫ И АБАЖУРЫ -->
-  <section class="category-section">
-    <h2 class="category-title">Люстри та абажури</h2>
-    
-    <div class="cards-grid">
-      <!-- Карточка 1 -->
-      <a href="chandelier.html" class="card-link">
-        <article class="card">
-          <div class="photo"><img src="chandelier1.jpg" alt="Абажур макраме"></div>
-          <h3>Абажур «Бохо»</h3>
-          <div class="price">від 2 200 грн</div>
-        </article>
-      </a>
+    <h1>
+      Макраме,<br>
+      яке хочеться<br>
+      торкнутися.
+    </h1>
 
-      <!-- Карточка 2 -->
-      <a href="chandelier.html" class="card-link">
-        <article class="card">
-          <div class="photo"><img src="chandelier2.jpg" alt="Подвесной светильник"></div>
-          <h3>Люстра підвісна</h3>
-          <div class="price">від 3 100 грн</div>
-        </article>
-      </a>
+    <p class="hero-text">
+      Авторські вироби ручної роботи,
+      створені з любов'ю до фактури,
+      натуральних відтінків та атмосфери моря.
+    </p>
+
+    <a href="#catalog" class="button">
+      Переглянути колекцію
+    </a>
+
+  </div>
+
+  <div class="hero-photo">
+    <span>ТУТ БУДЕ ФОТО</span>
+  </div>
+
+</section>
+<!-- CATALOG -->
+
+<section id="catalog">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div class="small-title">
+        collection
+      </div>
+
+      <h2>
+        Обрані роботи
+      </h2>
+
+      <p class="section-description">
+        Вироби можна замовити у готовому вигляді
+        або створити індивідуально під вас.
+      </p>
+
     </div>
-  </section>
 
-  <!-- КАТЕГОРИЯ 3: ОДЕЖДА И АКСЕССУАРЫ -->
-  <section class="category-section">
-    <h2 class="category-title">Одяг та аксесуари</h2>
-    
-    <div class="cards-grid">
-      <!-- Карточка 1 -->
-      <a href="dress.html" class="card-link">
-        <article class="card">
-          <div class="photo"><img src="dress1.jpg" alt="Макраме-сукня"></div>
-          <h3>Макраме-сукня</h3>
-          <div class="price">від 2 800 грн</div>
-        </article>
-      </a>
+
+    <div class="products">
+
+
+      <!-- PRODUCT 1 -->
+
+      <article class="product">
+
+        <div class="product-photo">
+          ФОТО СУКНІ
+        </div>
+
+        <div class="product-info">
+
+          <h3 class="product-name">
+            Макраме-сукня
+          </h3>
+
+          <p class="product-description">
+            Авторська сукня ручної роботи.
+            Можливе індивідуальне замовлення.
+          </p>
+
+          <div class="price">
+            від 2 800 грн
+          </div>
+
+          <a href="#contact" class="order-button">
+            Замовити
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+
+      <article class="product">
+
+        <div class="product-photo">
+          ФОТО ПАННО
+        </div>
+
+        <div class="product-info">
+
+          <h3 class="product-name">
+            Настінне панно
+          </h3>
+
+          <p class="product-description">
+            Об'ємний декор ручної роботи
+            для вашого інтер'єру.
+          </p>
+
+          <div class="price">
+            від 1 900 грн
+          </div>
+
+          <a href="#contact" class="order-button">
+            Замовити
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 3 -->
+
+      <article class="product">
+
+        <div class="product-photo">
+          ФОТО ЛЮСТРИ
+        </div>
+
+        <div class="product-info">
+
+          <h3 class="product-name">
+            Люстра з макраме
+          </h3>
+
+          <p class="product-description">
+            Атмосферний світильник
+            у стилі boho.
+          </p>
+
+          <div class="price">
+            від 2 500 грн
+          </div>
+
+          <a href="#contact"
+          class="order-button">
+            Замовити
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 4 -->
+
+      <article class="product">
+
+        <div class="product-photo">
+          ФОТО СУМКИ
+        </div>
+
+        <div class="product-info">
+
+          <h3 class="product-name">
+            Сумка ручної роботи
+          </h3>
+
+          <p class="product-description">
+            Легка плетена сумка
+            для особливих образів.
+          </p>
+
+          <div class="price">
+            від 1 200 грн
+          </div>
+
+          <a href="#contact" class="order-button">
+            Замовити
+          </a>
+
+        </div>
+
+      </article>
+
+
     </div>
-  </section>
 
-</main>
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+  <div class="container about-grid">
+
+    <div class="about-photo">
+      MACRA_ME
+    </div>
+
+
+    <div class="about-text">
+
+      <div class="small-title">
+        about macra_me.ua
+      </div>
+
+      <h2>
+        Речі з характером
+      </h2>
+
+      <p>
+        Macra_me.ua — це макраме ручної роботи,
+        де кожен вузол створюється вручну.
+      </p>
+
+      <p>
+        Тут зустрічаються бохо-естетика,
+        натуральні кольори, фактура нитки
+        та легкий настрій моря.
+      </p>
+
+
+      <div class="advantages">
+
+        <div class="advantage">
+          <strong>01</strong>
+          Ручна робота
+        </div>
+
+        <div class="advantage">
+          <strong>02</strong>
+          Індивідуальні замовлення
+        </div>
+
+        <div class="advantage">
+          <strong>03</strong>
+          Натуральна естетика
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section id="instagram" class="instagram">
+
+  <div class="container">
+
+    <div class="small-title">
+      follow me
+    </div>
+
+    <h2>
+      Більше робіт в Instagram
+    </h2>
+
+    <p class="section-description">
+      Нові вироби, процес створення та готові замовлення.
+    </p>
+
+    <!-- ЗАМІНИ ПОСИЛАННЯ НА СВІЙ INSTAGRAM -->
+
+    <a
+      href="https://instagram.com/"
+      target="_blank"
+      class="instagram-button"
+    >
+      Перейти в Instagram
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <div class="small-title">
+      let's create
+    </div>
+
+    <h2>
+      Хочеш щось особливе?
+    </h2>
+
+    <p>
+      Напиши мені, і ми разом обговоримо
+      виріб, розмір, колір та деталі замовлення.
+    </p>
+
+
+    <div class="contacts">
+
+      <!-- ЗАМІНИ ПОСИЛАННЯ -->
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        class="contact-button"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://t.me/"
+        target="_blank"
+        class="contact-button"
+      >
+        Telegram
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  © 2026 Macra_me.ua · handmade macramé
+
+</footer>
+
+
+</body>
+</html>
