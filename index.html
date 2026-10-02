@@ -27,22 +27,24 @@ h1{font-size:clamp(50px,7vw,86px);line-height:.96;margin:18px 0 25px}
 .hero p{max-width:510px;line-height:1.8;font-size:15px;color:#71675f}
 .btn{display:inline-block;margin-top:18px;padding:14px 25px;background:var(--brown);color:white;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;transition:.2s}
 .btn:hover{transform:translateY(-2px);background:#8e6846}
-.hero-art{height:520px;background:linear-gradient(145deg,#e4d5c8,#cdb7a3);position:relative;overflow:hidden}
-.hero-art:before{content:"";position:absolute;width:360px;height:360px;border:2px solid rgba(255,255,255,.6);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
-.hero-art:after{content:"🪢";position:absolute;font-size:150px;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.42}
+.hero-art{height:520px;position:relative;overflow:hidden;background:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}
+.hero-art:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(94,70,54,.18),rgba(255,255,255,.08))}
 section{padding:90px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:35px}
 h2{font-size:43px;margin:8px 0}.muted{color:#84786e;font-size:13px;line-height:1.7}
 .products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .card{background:var(--paper);border:1px solid #e5dbd1;overflow:hidden}
-.photo{aspect-ratio:1/1.12;background:linear-gradient(145deg,#e8ddd3,#cdb9a8);display:grid;place-items:center;color:rgba(255,255,255,.8);font-family:"Playfair Display";font-size:22px}
-.card:nth-child(2) .photo{background:linear-gradient(145deg,#ddd6ce,#bcae9f)}
-.card:nth-child(3) .photo{background:linear-gradient(145deg,#e8dfd6,#d1c0ad)}
-.card:nth-child(4) .photo{background:linear-gradient(145deg,#d8cbbb,#b8a18b)}
+.photo{position:relative;aspect-ratio:1/1.12;overflow:hidden;background:#e8ddd3}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.card:hover .photo img{transform:scale(1.04)}
+.card:nth-child(1) .photo{background:#e8ddd3}
+.card:nth-child(2) .photo{background:#ddd6ce}
+.card:nth-child(3) .photo{background:#e8dfd6}
+.card:nth-child(4) .photo{background:#d8cbbb}
 .info{padding:17px}.info h3{font-family:"Playfair Display";font-size:21px;font-weight:500;margin:0 0 7px}.price{font-size:13px;color:var(--brown)}
 .about{background:var(--beige)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.about-art{height:440px;background:linear-gradient(150deg,#bfa991,#e5d9cd);position:relative}
-.about-art:before{content:"MACRA_ME";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-8deg);font-family:"Playfair Display";font-size:42px;color:rgba(255,255,255,.65);white-space:nowrap}
+.about-art{height:440px;position:relative;background:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}
+.about-art:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(84,64,46,.18),rgba(255,255,255,.08))}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
 .feature{padding:22px;background:rgba(255,255,255,.45)}.feature b{display:block;margin-bottom:7px;font-family:"Playfair Display";font-size:19px}
 .contact{text-align:center}.contact-box{max-width:700px;margin:auto}
@@ -69,16 +71,16 @@ footer{padding:30px 0;border-top:1px solid #ded3c8;font-size:12px;color:#85796e}
     <p>Авторські речі ручної роботи, створені з любов'ю до фактури, натуральних відтінків та атмосфери моря.</p>
     <a class="btn" href="#catalog">Переглянути колекцію</a>
   </div>
-  <div class="hero-art" aria-label="Фото виробу"></div>
+  <img src="круглое панно.jpg" alt="Фото виробу" class="hero-art" aria-label="Фото виробу"></div>
 </section>
 
 <section id="catalog" class="container">
   <div class="section-head"><div><div class="eyebrow">collection</div><h2>Обрані роботи</h2></div><div class="muted">Ціни та наявність можна змінювати</div></div>
   <div class="products">
-    <article class="card"><div class="photo">ФОТО СУКНІ</div><div class="info"><h3>Макраме-сукня</h3><div class="price">від 2 800 грн</div></div></article>
-    <article class="card"><div class="photo">ФОТО ПАННО</div><div class="info"><h3>Настінне панно</h3><div class="price">від 1 900 грн</div></div></article>
-    <article class="card"><div class="photo">ФОТО ЛЮСТРИ</div><div class="info"><h3>Люстра з макраме</h3><div class="price">від 2 500 грн</div></div></article>
-    <article class="card"><div class="photo">ФОТО СУМКИ</div><div class="info"><h3>Сумка ручної роботи</h3><div class="price">від 1 200 грн</div></div></article>
+    <article class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Макраме-сукня" loading="lazy"></div><div class="info"><h3>Макраме-сукня</h3><div class="price">від 2 800 грн</div></div></article>
+    <article class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Настінне панно" loading="lazy"></div><div class="info"><h3>Настінне панно</h3><div class="price">від 1 900 грн</div></div></article>
+    <article class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Люстра з макраме" loading="lazy"></div><div class="info"><h3>Люстра з макраме</h3><div class="price">від 2 500 грн</div></div></article>
+    <article class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Сумка ручної роботи" loading="lazy"></div><div class="info"><h3>Сумка ручної роботи</h3><div class="price">від 1 200 грн</div></div></article>
   </div>
 </section>
 
