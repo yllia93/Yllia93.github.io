@@ -64,42 +64,75 @@ footer{padding:30px 0;border-top:1px solid #ded3c8;font-size:12px;color:#85796e}
 </div></header>
 
 <main>
-<section class="container hero">
-  <div class="hero-copy">
-    <div class="eyebrow">handmade · boho · made with love</div>
-    <h1>Макраме,<br>яке хочеться<br>торкнутися.</h1>
-    <p>Авторські речі ручної роботи, створені з любов'ю до фактури, натуральних відтінків та атмосфери моря.</p>
-    <a class="btn" href="#catalog">Переглянути колекцію</a>
-  </div>
-  <img src="panno.jpg" alt="Фото виробу" class="hero-art" aria-label="Фото виробу"></div>
-</section>
+  <!-- ЗАГОЛОВОК КАТАЛОГА -->
+  <h1 id="catalog" style="text-align: center; margin: 40px 0 20px;">Каталог виробів</h1>
 
-<section id="catalog" class="container">
-  <div class="section-head"><div><div class="eyebrow">collection</div><h2>Обрані роботи</h2></div><div class="muted">Ціни та наявність можна змінювати</div></div>
-  <div class="products">
-    <a href="pannokrug.html" style="text-decoration: none; color: inherit;"> <article class="card"> <div class="panno"><img src="panno1.jpg" alt="Настінні панно"></div> <h3></h3> <div> </div> </article> </a>
-    <section id="catalog" class="container">
-  <div class="section-head"><div><div class="eyebrow">collection</div><h2>Обрані роботи</h2></div><div class="muted">Ціни та наявність можна змінювати</div></div>
-  <div class="products">
-    <a href="lustry.html" style="text-decoration: none; color: inherit;"> <article class="card"> <div class="lustry"><img src="lustry.jpg" alt="Люстри макраме"></div> <h3></h3> <div> </div> </article> </a>
-    <article class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Люстра з макраме" loading="lazy"></div><div class="info"><h3>Люстра з макраме</h3><div class="price">від 2 500 грн</div></div></article>
-    <article class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Сумка ручної роботи" loading="lazy"></div><div class="info"><h3>Сумка ручної роботи</h3><div class="price">від 1 200 грн</div></div></article>
-  </div>
-</section>
+  <!-- КАТЕГОРИЯ 1: ПАННО -->
+  <section class="category-section">
+    <h2 class="category-title">Макраме-панно</h2>
+    
+    <div class="cards-grid">
+      <!-- Карточка 1 -->
+      <a href="pannokrug.html" class="card-link">
+        <article class="card">
+          <div class="photo"><img src="panno1.jpg" alt="Панно кругле"></div>
+          <h3>Панно кругле «Коло»</h3>
+          <div class="price">від 1 900 грн</div>
+        </article>
+      </a>
 
-<section id="about" class="about"><div class="container about-grid">
-  <div class="about-art"></div>
-  <div><div class="eyebrow">about macra_me.ua</div><h2>Речі з характером</h2>
-  <p class="muted">Macra_me.ua — це макраме ручної роботи, де кожен вузол створюється вручну. Тут зустрічаються бохо-естетика, натуральні кольори та легкий настрій моря.</p>
-  <div class="features"><div class="feature"><b>01</b>Ручна робота</div><div class="feature"><b>02</b>Індивідуальні замовлення</div><div class="feature"><b>03</b>Натуральна естетика</div></div>
-  </div>
-</div></section>
+      <!-- Карточка 2 -->
+      <a href="pannokrug.html" class="card-link">
+        <article class="card">
+          <div class="photo"><img src="panno2.jpg" alt="Панно велике"></div>
+          <h3>Панно настінне велике</h3>
+          <div class="price">від 2 500 грн</div>
+        </article>
+      </a>
+    </div>
+  </section>
 
-<section id="contact" class="container contact"><div class="contact-box">
- <div class="eyebrow">let's create</div><h2>Хочеш щось особливе?</h2>
- <p class="muted">Напиши мені, і ми разом обговоримо виріб, розмір, колір та деталі замовлення.</p>
- <div class="socials"><a class="social" href="https://instagram.com/" target="_blank">Instagram</a><a class="social" href="https://t.me/" target="_blank">Telegram</a></div>
-</div></section>
+  <!-- КАТЕГОРИЯ 2: ЛЮСТРЫ И АБАЖУРЫ -->
+  <section class="category-section">
+    <h2 class="category-title">Люстри та абажури</h2>
+    
+    <div class="cards-grid">
+      <!-- Карточка 1 -->
+      <a href="chandelier.html" class="card-link">
+        <article class="card">
+          <div class="photo"><img src="chandelier1.jpg" alt="Абажур макраме"></div>
+          <h3>Абажур «Бохо»</h3>
+          <div class="price">від 2 200 грн</div>
+        </article>
+      </a>
+
+      <!-- Карточка 2 -->
+      <a href="chandelier.html" class="card-link">
+        <article class="card">
+          <div class="photo"><img src="chandelier2.jpg" alt="Подвесной светильник"></div>
+          <h3>Люстра підвісна</h3>
+          <div class="price">від 3 100 грн</div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!-- КАТЕГОРИЯ 3: ОДЕЖДА И АКСЕССУАРЫ -->
+  <section class="category-section">
+    <h2 class="category-title">Одяг та аксесуари</h2>
+    
+    <div class="cards-grid">
+      <!-- Карточка 1 -->
+      <a href="dress.html" class="card-link">
+        <article class="card">
+          <div class="photo"><img src="dress1.jpg" alt="Макраме-сукня"></div>
+          <h3>Макраме-сукня</h3>
+          <div class="price">від 2 800 грн</div>
+        </article>
+      </a>
+    </div>
+  </section>
+
 </main>
 <footer><div class="container">© 2026 Macra_me.ua · handmade macramé</div></footer>
 </body>
