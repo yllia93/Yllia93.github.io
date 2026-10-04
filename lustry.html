@@ -7,7 +7,53 @@
     <title>Абажури | Macra_me.ua</title>
 
     <style>
-        * {
+        /* Общий контейнер карточки */
+.product-card {
+  background-color: #ffffff; /* Белый фон */
+  border-radius: 16px;       /* Скругление углов всей карточки */
+  overflow: hidden;          /* Чтобы изображение скруглялось сверху */
+  margin: 16px auto;         /* Отступы снаружи карточки */
+  max-width: 380px;          /* Ограничение ширины карточки */
+}
+
+/* Картинка во всю ширину */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Белый текстовый блок с отступами */
+.card-body {
+  background-color: #ffffff;
+  padding: 20px 16px;        /* Внутренние отступы внутри блока */
+  text-align: center;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #4a3e3d;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #6e6563;
+  margin-bottom: 16px;
+}
+
+/* Коричневая кнопка со скруглением */
+.btn-primary {
+  display: inline-block;
+  background-color: #a88363; /* Коричневый цвет кнопки */
+  color: #ffffff;
+  padding: 10px 32px;
+  border-radius: 20px;       /* Овальное скругление кнопки */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}* {
             box-sizing: border-box;
         }
 
