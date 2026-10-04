@@ -11,72 +11,54 @@
         content="Macra_me.ua — авторські вироби з макраме ручної роботи. Сукні, панно, люстри, сумки та декор.">
 
   <style>
-    .product-card {
-    width: 100%;
-    height: 560px;
-    object-fit: cover;
-    display: block;
-    background: #fffaf5;
-    border: 1px solid #ddd2c8;
-    box-sizing: border-box;
+.card {
+  background-color: #f5ebe6; 
+  border-radius: 8px;        
+  overflow: hidden;          
+  max-width: 350px;          
+  margin: 0 auto;           
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Квадратная область для фото */
-.product-photo {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    background: #eee5dc;
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;            
+  object-fit: cover;
 }
 
-/* Само фото */
-.product-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+.card-content {
+  padding: 24px 20px;        
+  text-align: center;
 }
 
-/* Текст под фото */
-.product-info {
-    padding: 30px 35px 35px;
-    text-align: center;
+.card-title {
+  font-size: 22px;
+  color: #4a3e3d;
+  margin-bottom: 12px;
 }
 
-.product-info h2 {
-    color: #51463e;
-    margin-top: 0;
-    font-size: 30px;
+.card-description {
+  font-size: 14px;
+  color: #7a6e6b;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-.product-info p {
-    color: #8b8179;
-    font-size: 18px;
-    line-height: 1.6;
+.card-btn {
+  display: inline-block;
+  background-color: #a67c52; 
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
 }
 
-/* Кнопка по центру */
-.view-button {
-    display: block;
-    width: fit-content;
-    margin: 30px auto 0;
-    padding: 12px 35px;
-    background: #a67c52;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-.view-button:hover {
-    background: #8d6845;
-}
+.card-btn:hover {
+  background-color: #8c653f;
+} 
     html {
       scroll-behavior: smooth;
     }
@@ -629,29 +611,18 @@
 
 
       <!-- PRODUCT 1 -->
-
-        <div class="product-card">
-
-    <div class="product-photo">
-        <img src="lystry.jpg" alt="Люстра макраме">
-    </div>
-
-    <div class="product-info">
-        <h2>Абажури макраме</h2>
-
-        <p>
-            Абажури ручної роботи. Можливе індивідуальне
-            замовлення
-        </p>
-
-        <a href="lustry.html" class="view-button">
-            Дивитись
-        </a>
-    </div>
-
+        <div class="card">
+  <div class="card-image">
+    <img src="lystry.jpg" alt="Абажури макраме">
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">Абажури макраме</h3>
+    <p class="card-description">
+      Абажури ручної роботи. Можливе індивідуальне замовлення
+    </p>
+    <a href="#" class="card-btn">Дивитись</a>
+  </div>
         </div>
-      
-
 
       <!-- PRODUCT 2 -->
 
