@@ -4,159 +4,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Абажури | Macra_me.ua</title>
+    <title>Макраме люстра | Macra_me.ua</title>
 
     <style>
-        /* Общий контейнер карточки */
-.product-card {
-  background-color: #ffffff; /* Белый фон */
-  border-radius: 16px;       /* Скругление углов всей карточки */
-  overflow: hidden;          /* Чтобы изображение скруглялось сверху */
-  margin: 16px auto;         /* Отступы снаружи карточки */
-  max-width: 380px;          /* Ограничение ширины карточки */
-}
+        * {
+            box-sizing: border-box;
+        }
 
-/* Картинка во всю ширину */
-.card-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
+            color: #5d5148;
+        }
 
-/* Белый текстовый блок с отступами */
-.card-body {
-  background-color: #ffffff;
-  padding: 20px 16px;        /* Внутренние отступы внутри блока */
-  text-align: center;
-}
+        /* Верхняя часть */
+        header {
+            background: #e7dcd2;
+            padding: 20px;
+            text-align: center;
+        }
 
-.card-title {
-  font-size: 20px;
-  color: #4a3e3d;
-  margin-bottom: 8px;
-}
+        .logo {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+        }
 
-.card-description {
-  font-size: 14px;
-  color: #6e6563;
-  margin-bottom: 16px;
-}
+        .back {
+            display: inline-block;
+            margin-top: 12px;
+            color: #806b5a;
+            text-decoration: none;
+            font-size: 15px;
+        }
 
-/* Коричневая кнопка со скруглением */
-.btn-primary {
-  display: inline-block;
-  background-color: #a88363; /* Коричневый цвет кнопки */
-  color: #ffffff;
-  padding: 10px 32px;
-  border-radius: 20px;       /* Овальное скругление кнопки */
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-}
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        /* Основной блок */
+        .product {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        /* Галерея */
+        .gallery {
+            width: 100%;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(80, 60, 40, 0.12);
+        }
+
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .photos img:hover {
+            border-color: #a67c52;
+            transform: scale(1.03);
+        }
+
+        /* Описание */
+        .description {
+            padding: 10px 5px;
+        }
+
+        .description h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: normal;
+            color: #715b4b;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #8b7868;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .info {
+            background: #eee5dc;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info p {
+            margin: 9px 0;
+            font-size: 16px;
+        }
+
+        .info strong {
+            color: #6c594a;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #665b53;
+        }
+
+        /* Кнопка */
+        .order {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: #a67c52;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .order:hover {
+            background: #896542;
+            transform: translateY(-2px);
+        }
+
+        /* Нижняя часть */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            background: #e7dcd2;
+            color: #806b5a;
+        }
+
+        /* Телефон */
+        @media (max-width: 750px) {
+
+            .product {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .main-photo {
+                height: 400px;
+            }
+
+            .description h1 {
+                font-size: 30px;
+            }
+
+            .photos img {
+                height: 75px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Macra_me.ua 🐚</h1>
-    <p>Макраме • бохо • ручна робота</p>
+    <div class="logo">Macra_me.ua 🐚</div>
 
-    <a class="back" href="index.html">
-        ← На головну
+    <a href="lystry.html" class="back">
+        ← Назад до люстр
     </a>
 </header>
 
-<div class="container">
 
-    <div class="title">
-        <h2>Абажури макраме</h2>
-        <p>
-            Варіанти абажурів під замовлення 🤍
+<main class="product">
+
+    <!-- ФОТО -->
+    <div class="gallery">
+
+        <!-- ГЛАВНОЕ ФОТО -->
+        <img
+            id="mainPhoto"
+            class="main-photo"
+            src="lystra1.jpg"
+            alt="Макраме люстра"
+        >
+
+        <!-- МИНИАТЮРЫ -->
+        <div class="photos">
+
+            <img
+                src="lystra1.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="lystra2.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="lystra3.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="lystra4.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+        </div>
+    </div>
+
+
+    <!-- ОПИСАНИЕ -->
+    <div class="description">
+
+        <h1>Люстра макраме</h1>
+
+        <p class="subtitle">
+            Стильна люстра ручної роботи, створена з любов'ю
+            та увагою до кожної деталі 🤍
         </p>
+
+        <div class="price">
+            Ціна: за запитом
+        </div>
+
+        <div class="info">
+
+            <p>
+                <strong>Матеріал:</strong>
+                бавовняний шнур
+            </p>
+
+            <p>
+                <strong>Колір:</strong>
+                натуральний / бежевий
+            </p>
+
+            <p>
+                <strong>Розмір:</strong>
+                50 см × 40 см
+            </p>
+
+            <p>
+                <strong>Виготовлення:</strong>
+                під замовлення
+            </p>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+                Люстра виготовлена вручну в техніці макраме.
+                Вона додає інтер'єру тепла, затишку та особливої
+                атмосфери.
+            </p>
+
+            <p>
+                Підійде для спальні, вітальні, кухні або
+                затишного boho-простору.
+            </p>
+
+            <p>
+                Можливе виготовлення в іншому розмірі
+                та кольорі за вашим бажанням.
+            </p>
+
+        </div>
+
+        <a href="https://www.instagram.com/" class="order">
+            Замовити
+        </a>
+
     </div>
 
-    <div class="dresses">
+</main>
 
-        <!-- ПЛАТЬЕ №1 -->
-        <div class="hero-photo">
-            
-    <img src="lystry.jpg" alt="Люстра з макраме" style="width: 100%; height: 500px; object-fit: cover;"border-radius: 12px;">
-        </div>
-
-            <div class="dress-info">
-
-                <h3>Абажур «Boho»</h3>
-
-                <p class="description">
-                    Абажур ручної роботи.
-                    Різні розміри.
-                </p>
-
-                <a
-                    class="order"
-                    <a href="Lystry1.html" class="order-btn">
-                    ДИВИТИСЬ
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- ПЛАТЬЕ №2 -->
-        <div class="dress">
-
-            <img src="file_00000000135881fbbacbb242aae3bfe2.png" alt="Платье макраме">
-
-            <div class="dress-info">
-
-                <h3>Абажур «Медуза»</h3>
-
-                <p class="description">
-                    Авторський абажур.
-                    Додасть затишку в вашу оселю🤍
-                </p>
-
-                <a
-                    class="order"
-                    <a href="Lystry2.html" class="order-btn">
-                    ДИВИТИСЬ
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- ПЛАТЬЕ №3 -->
-        <div class="dress">
-
-            <img src="IMG_20260724_175135.jpg" alt="Белое платье макраме">
-
-            <div class="dress-info">
-
-                <h3>Абажур "Бахрома"</h3>
-
-                <p class="description">
-                    Абажур з бавовняного шнура 
-                    і з алюмінієвим ободом
-                </p>
-
-                <a
-                     class="order"
-                    <a href="Lystry3.html" class="order-btn">
-                    ДИВИТИСЬ
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-</div>
 
 <footer>
-    © 2026 Macra_me.ua
+    Macra_me.ua · Handmade macramé 🤍
 </footer>
+
+
+<script>
+
+    function changePhoto(photo) {
+        document.getElementById("mainPhoto").src = photo.src;
+    }
+
+</script>
 
 </body>
 </html>
