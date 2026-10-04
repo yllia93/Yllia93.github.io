@@ -11,33 +11,70 @@
         content="Macra_me.ua — авторські вироби з макраме ручної роботи. Сукні, панно, люстри, сумки та декор.">
 
   <style>
-    .hero-photo img {
-  width: 100%;
-  height: 550px;  
-  overflow:hidden;
-  background: #eee6de;
-  object-fit: 16px; 
-   
-  }
-    .photo-frame img {
+    .product-card {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fffaf5;
+    border: 1px solid #ddd2c8;
+    box-sizing: border-box;
+}
+
+/* Квадратная область для фото */
+.product-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #eee5dc;
+}
+
+/* Само фото */
+.product-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
 }
-.order-btn {
+
+/* Текст под фото */
+.product-info {
+    padding: 30px 35px 35px;
+    text-align: left;
+}
+
+.product-info h2 {
+    color: #51463e;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.product-info p {
+    color: #8b8179;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Кнопка по центру */
+.view-button {
     display: block;
     width: fit-content;
-    margin: 25px auto 0;
-    padding: 18px 60px;
-    border: 1px solid #b9a99b;
-    background: transparent;
-    color: #6f6258;
+    margin: 30px auto 0;
+    padding: 12px 35px;
+    background: #a67c52;
+    color: white;
     text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-align: center;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.view-button:hover {
+    background: #8d6845;
 }
     html {
       scroll-behavior: smooth;
@@ -592,32 +629,26 @@
 
       <!-- PRODUCT 1 -->
 
-     <article class="product">
+        <div class="product-card">
 
-        <div class="hero-photo">
-        <img src="lystry.jpg" alt="Люстра з макраме" style="width: 100%; height: 500px; object-fit: cover;">
-          
-          ФОТО ПАННО
-        </div>
+    <div class="product-photo">
+        <img src="lyustra.jpg" alt="Люстра макраме">
+    </div>
 
-        <div class="product-info">
+    <div class="product-info">
+        <h2>Абажури макраме</h2>
 
-          <h3 class="product-name">
-            Абажури макраме
-          </h3>
+        <p>
+            Абажури ручної роботи. Можливе індивідуальне
+            замовлення
+        </p>
 
-          <p class="product-description">
-            Абажури ручної роботи.
-            Можливе індивідуальне замовлення
-          </p>
-
-          <a href="#lustry.html="order-button">
+        <a href="lystry.html" class="view-button">
             Дивитись
-          </a>
+        </a>
+    </div>
 
         </div>
-
-     </article>
       
 
 
