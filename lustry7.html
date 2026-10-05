@@ -1,1 +1,323 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Макраме люстра | Macra_me.ua</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
+            color: #5d5148;
+        }
+
+        /* Верхняя часть */
+        header {
+            background: #e7dcd2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 12px;
+            color: #806b5a;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        /* Основной блок */
+        .product {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        /* Галерея */
+        .gallery {
+            width: 100%;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(80, 60, 40, 0.12);
+        }
+
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .photos img:hover {
+            border-color: #a67c52;
+            transform: scale(1.03);
+        }
+
+        /* Описание */
+        .description {
+            padding: 10px 5px;
+        }
+
+        .description h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: normal;
+            color: #715b4b;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #8b7868;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .info {
+            background: #eee5dc;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info p {
+            margin: 9px 0;
+            font-size: 16px;
+        }
+
+        .info strong {
+            color: #6c594a;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #665b53;
+        }
+
+        /* Кнопка */
+        .order {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: #a67c52;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .order:hover {
+            background: #896542;
+            transform: translateY(-2px);
+        }
+
+        /* Нижняя часть */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            background: #e7dcd2;
+            color: #806b5a;
+        }
+
+        /* Телефон */
+        @media (max-width: 750px) {
+
+            .product {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .main-photo {
+                height: 400px;
+            }
+
+            .description h1 {
+                font-size: 30px;
+            }
+
+            .photos img {
+                height: 75px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Macra_me.ua 🐚</div>
+
+    <a href="lustry.html" class="back">
+        ← Назад до люстр
+    </a>
+</header>
+
+
+<main class="product">
+
+    <!-- ФОТО -->
+    <div class="gallery">
+
+        <!-- ГЛАВНОЕ ФОТО -->
+        <img
+            id="mainPhoto"
+            class="main-photo"
+            src="0-02-05-33b680d5c1967858f13f6a10d7ff367ac5305ef397ac716d6489087d6c791da0_ffb6396a.jpg"
+            alt="Макраме люстра"
+        >
+
+        <!-- МИНИАТЮРЫ -->
+        <div class="photos">
+
+            <img
+                src="0-02-05-33b680d5c1967858f13f6a10d7ff367ac5305ef397ac716d6489087d6c791da0_ffb6396a.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-0a167a9aa747beaeb702e73c2a046ef8ba60b1f5a7f92101ed4888a2d5805c7b_a5efdcc6.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-0a167a9aa747beaeb702e73c2a046ef8ba60b1f5a7f92101ed4888a2d5805c7b_a5efdcc6.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+        </div>
+    </div>
+
+
+    <!-- ОПИСАНИЕ -->
+    <div class="description">
+
+        <h1>Абажур макраме</h1>
+
+        <p class="subtitle">
+            Стильна люстра ручної роботи, створена з любов'ю
+            та увагою до кожної деталі 🤍
+        </p>
+
+        <div class="price">
+            Ціна: за запитом
+        </div>
+
+        <div class="info">
+
+            <p>
+                <strong>Матеріал:</strong>
+                бавовняний шнур
+            </p>
+
+            <p>
+                <strong>Колір:</strong>
+                натуральний / бежевий
+            </p>
+
+            <p>
+                <strong>Розмір:</strong>
+                від d=30 см
+            </p>
+
+            <p>
+                <strong>Виготовлення:</strong>
+                під замовлення
+            </p>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+                Вишуканий підвісний абажур ручної роботи, виконаний у техніці макраме. Модель має виразний геометричний орнамент 
+              та довгу бахрому з дерев'яними елементами. М'яко розсіює світло, утворюючи красиві візерункові тіні. Чудово поєднується
+              з сухоцвітами, дзеркалами та елементами з дерева
+            </p>
+
+            <p>
+                Підійде для спальні, вітальні, кухні або
+                затишного boho-простору.
+            </p>
+
+            <p>
+                Можливе виготовлення в іншому розмірі
+                та кольорі за вашим бажанням.
+            </p>
+
+        </div>
+
+        <a href="https://www.instagram.com/" class="order">
+            Замовити
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+    Macra_me.ua · Handmade macramé 🤍
+</footer>
+
+
+<script>
+
+    function changePhoto(photo) {
+        document.getElementById("mainPhoto").src = photo.src;
+    }
+
+</script>
+
+</body>
+              </html>
