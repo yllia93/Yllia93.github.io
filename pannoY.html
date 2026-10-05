@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Панно | Macra_me.ua</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
+            color: #5f5147;
+        }
+
+        header {
+            background: #e7dcd2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #a67c52;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 15px;
+            color: #8b6b50;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #7b604b;
+        }
+
+        .title p {
+            font-size: 16px;
+        }
+
+        .dresses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .dress {
+            background: #fffaf6;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(100, 80, 60, 0.12);
+            transition: transform 0.3s;
+        }
+
+        .dress:hover {
+            transform: translateY(-5px);
+        }
+
+        .dress img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .dress-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dress-info h3 {
+            margin: 0 0 10px;
+            color: #7b604b;
+            font-size: 21px;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #a67c52;
+            margin-bottom: 15px;
+        }
+
+        .order {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #a67c52;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .order:hover {
+            background: #8c6545;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            background: #e7dcd2;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Macra_me.ua 🐚</h1>
+    <p>Макраме • бохо • ручная работа</p>
+
+    <a class="back" href="index.html">
+        ← На головну
+    </a>
+</header>
+
+<div class="container">
+
+    <div class="title">
+        <h2>Панно на замовлення</h2>
+        <p>
+            Виготовлення панно за вашими розмірами 
+        </p>
+    </div>
+
+    <div class="dresses">
+
+        <!-- ПЛАТЬЕ №1 -->
+        <div class="dress">
+
+            <img src="0-02-05-f1f732d3b9c395465209a5b0ef555908f2dcdc54b9f28057e7b0e21935ab3119_64fb70d1.jpg" alt="Бежевое платье макраме">
+
+            <div class="dress-info">
+
+                <h3>Панно «Ocean emerald»</h3>
+
+                <p class="description">
+                    Панно ручної работи.
+                    В наявності.
+                </p>
+
+                <div class="price">
+                    6 000 грн
+                </div>
+
+                <a
+                    class="order"
+                    href="panno2.html"
+                    target="_blank">
+                    Дивитись
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- ПЛАТЬЕ №2 -->
+        <div class="dress">
+
+            <img src="0-02-05-00cc9a104dd8f612515a820953cf8207dbf510a72167ada8f8d76788e0b6c548_6f112d7f.jpg" alt="Платье макраме">
+
+            <div class="dress-info">
+
+                <h3>Панно «Ялинка»</h3>
+
+                <p class="description">
+                    Новорічне панно.
+                    В наявності
+                </p>
+
+                <div class="price">
+                    5 000 грн
+                </div>
+
+                <a
+                    class="order"
+                    href="panno1/panno1/panno1.html"
+                    target="_blank">
+                    Дивитись 
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- ПЛАТЬЕ №3 -->
+        <div class="dress">
+
+            <img src="file_00000000c39881f4968a11e61a5c70db.png" alt="Белое платье макраме">
+
+            <div class="dress-info">
+
+                <h3>Абажур «Indigo»</h3>
+
+                <p class="description">
+                    Абажур з бахромой з бавовняного шнура
+                    та з алюмінієвим ободом
+                </p>
+
+                <div class="price">
+                    3 000 грн
+                </div>
+
+                <a
+                    class="order"
+                    href="Lystry3.html"
+                    target="_blank">
+                    Дивитись
+                </a>
+
+            </div>
+        </div>
+        
+        <!-- ПЛАТЬЕ №4 -->
+        <div class="dress">
+
+            <img src="file_00000000ca88720a937ff5626541e425.png" alt="Белое платье макраме">
+
+            <div class="dress-info">
+
+                <h3>Абажур «Spіral»</h3>
+
+                <p class="description">
+                    Абажур в бордовому кольорі
+                    під замовлення можна обрати будь-який колір і розмір
+                </p>
+
+                <div class="price">
+                    від 3 000 грн
+                </div>
+
+                <a
+                    class="order"
+                    href="Lustry4.html"
+                    target="_blank">
+                    Дивитись
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Macra_me.ua
+</footer>
+
+</body>
+</html>
+
+
+    </div>
+</div>
