@@ -66,12 +66,18 @@
   background-color: transparent; /* Прозрачный фон */
   border: 1px solid #b8a398;   /* Тонкая рамка (подберите цвет под ваш дизайн) */
   color: #4a3e3d;             /* Цвет текста */
-  text-align: center;         /* Выравнивание текста по центру */
+  text-align: center; 
+  margin-top: auto;            /* Выравнивание текста по центру */
   font-size: 14px;            /* Размер шрифта */
   letter-spacing: 1px;        /* Межбуквенный интервал */
   text-decoration: none;      /* Убирает подчеркивание, если это ссылка <a> */
   box-sizing: border-box;     /* Учитывает рамку в общую ширину */
   cursor: pointer;
+      
+      .product {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     }
     html {
       scroll-behavior: smooth;
