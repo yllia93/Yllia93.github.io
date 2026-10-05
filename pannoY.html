@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Панно | Macra_me.ua</title>
+    <title>Макраме люстра | Macra_me.ua</title>
 
     <style>
         * {
@@ -15,127 +15,177 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f5f1eb;
-            color: #5f5147;
+            color: #5d5148;
         }
 
+        /* Верхняя часть */
         header {
             background: #e7dcd2;
             padding: 20px;
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
+        .logo {
+            font-size: 28px;
             color: #a67c52;
-            font-size: 30px;
-        }
-
-        header p {
-            margin: 8px 0 0;
-            font-size: 15px;
+            font-weight: bold;
         }
 
         .back {
             display: inline-block;
-            margin-top: 15px;
-            color: #8b6b50;
+            margin-top: 12px;
+            color: #806b5a;
             text-decoration: none;
+            font-size: 15px;
         }
 
         .back:hover {
             text-decoration: underline;
         }
 
-        .container {
+        /* Основной блок */
+        .product {
             max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .title h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #7b604b;
-        }
-
-        .title p {
-            font-size: 16px;
-        }
-
-        .dresses {
+            margin: 40px auto;
+            padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
         }
 
-        .dress {
-            background: #fffaf6;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(100, 80, 60, 0.12);
-            transition: transform 0.3s;
-        }
-
-        .dress:hover {
-            transform: translateY(-5px);
-        }
-
-        .dress img {
+        /* Галерея */
+        .gallery {
             width: 100%;
-            height: 360px;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 520px;
             object-fit: cover;
+            border-radius: 18px;
             display: block;
+            box-shadow: 0 8px 25px rgba(80, 60, 40, 0.12);
         }
 
-        .dress-info {
-            padding: 20px;
-            text-align: center;
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 12px;
         }
 
-        .dress-info h3 {
-            margin: 0 0 10px;
-            color: #7b604b;
-            font-size: 21px;
+        .photos img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
         }
 
+        .photos img:hover {
+            border-color: #a67c52;
+            transform: scale(1.03);
+        }
+
+        /* Описание */
         .description {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            padding: 10px 5px;
         }
 
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #a67c52;
+        .description h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: normal;
+            color: #715b4b;
+            margin-top: 0;
             margin-bottom: 15px;
         }
 
+        .subtitle {
+            font-size: 17px;
+            color: #8b7868;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .info {
+            background: #eee5dc;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info p {
+            margin: 9px 0;
+            font-size: 16px;
+        }
+
+        .info strong {
+            color: #6c594a;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #665b53;
+        }
+
+        /* Кнопка */
         .order {
             display: inline-block;
-            padding: 12px 25px;
+            margin-top: 20px;
+            padding: 15px 35px;
             background: #a67c52;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            transition: background 0.3s;
+            border-radius: 30px;
+            font-size: 17px;
+            transition: 0.3s;
         }
 
         .order:hover {
-            background: #8c6545;
+            background: #896542;
+            transform: translateY(-2px);
         }
 
+        /* Нижняя часть */
         footer {
             text-align: center;
             padding: 30px 20px;
-            margin-top: 40px;
+            margin-top: 30px;
             background: #e7dcd2;
-            font-size: 14px;
+            color: #806b5a;
+        }
+
+        /* Телефон */
+        @media (max-width: 750px) {
+
+            .product {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .main-photo {
+                height: 400px;
+            }
+
+            .description h1 {
+                font-size: 30px;
+            }
+
+            .photos img {
+                height: 75px;
+            }
         }
     </style>
 </head>
@@ -143,149 +193,139 @@
 <body>
 
 <header>
-    <h1>Macra_me.ua 🐚</h1>
-    <p>Макраме • бохо • ручная работа</p>
+    <div class="logo">Macra_me.ua 🐚</div>
 
-    <a class="back" href="index.html">
-        ← На головну
+    <a href="lustry.html" class="back">
+        ← Назад до панно
     </a>
 </header>
 
-<div class="container">
 
-    <div class="title">
-        <h2>Панно на замовлення</h2>
-        <p>
-            Виготовлення панно за вашими розмірами 
+<main class="product">
+
+    <!-- ФОТО -->
+    <div class="gallery">
+
+        <!-- ГЛАВНОЕ ФОТО -->
+        <img
+            id="mainPhoto"
+            class="main-photo"
+            src="0-02-05-00cc9a104dd8f612515a820953cf8207dbf510a72167ada8f8d76788e0b6c548_6f112d7f.jpg"
+            alt="Макраме люстра"
+        >
+
+        <!-- МИНИАТЮРЫ -->
+        <div class="photos">
+
+            <img
+                src="0-02-05-00cc9a104dd8f612515a820953cf8207dbf510a72167ada8f8d76788e0b6c548_6f112d7f.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-9c30bd26b9b07426386072f2e106124362768ac2b428f8b69a80bcc11eb9020f_766328da.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-cc37b70a92373be9e6a06553474a06caea22a2c44344a946a6fe6cbbeeb5f442_766aa846.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-5a0d4292c86b8708effbad54a021bf3abdfc8a5e6a7d0f4107fc756e7457607e_34829781.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+        </div>
+    </div>
+
+
+    <!-- ОПИСАНИЕ -->
+    <div class="description">
+
+        <h1>Панно макраме</h1>
+
+        <p class="subtitle">
+            Стильне панно ручної роботи, створена з любов'ю
+            та увагою до кожної деталі 🤍
         </p>
+
+        <div class="price">
+            Ціна: 6 000 грн
+        </div>
+
+        <div class="info">
+
+            <p>
+                <strong>Матеріал:</strong>
+                бавовняний шнур
+            </p>
+
+            <p>
+                <strong>Колір:</strong>
+                темно-бірюзовий
+            </p>
+
+            <p>
+                <strong>Розмір:</strong>
+                Ширина: 90 см
+                Довжина: 150 см
+            </p>
+
+            <p>
+                <strong>Виготовлення:</strong>
+                В наявності
+            </p>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+                Пориньте в атмосферу гармонії та затишку з настінним панно ручної роботи. 
+                Насичений смарагдово-бірюзовий відтінок і складний геометричний візерунок роблять
+                його виразним акцентом для інтер'єру в стилі бохо чи сканди. Кожна нитка сплетена
+                вручну, щоб принести у ваш дім тепло та естетику природи.
+            </p>
+
+            <p>
+                Підійде для спальні, вітальні, кухні або
+                затишного boho-простору.
+            </p>
+
+            <p>
+                Можливе виготовлення в іншому розмірі
+                та кольорі за вашим бажанням.
+            </p>
+
+        </div>
+
+        <a href="https://www.instagram.com/macra_me.ua?stkn=MWhuMzBsMmU0c2R2dg==" class="order">
+            Замовити
+        </a>
+
     </div>
 
-    <div class="dresses">
+</main>
 
-        <!-- ПЛАТЬЕ №1 -->
-        <div class="dress">
-
-            <img src="0-02-05-f1f732d3b9c395465209a5b0ef555908f2dcdc54b9f28057e7b0e21935ab3119_64fb70d1.jpg" alt="Бежевое платье макраме">
-
-            <div class="dress-info">
-
-                <h3>Панно «Ocean emerald»</h3>
-
-                <p class="description">
-                    Панно ручної работи.
-                    В наявності.
-                </p>
-
-                <div class="price">
-                    6 000 грн
-                </div>
-
-                <a
-                    class="order"
-                    href="panno2.html"
-                    target="_blank">
-                    Дивитись
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- ПЛАТЬЕ №2 -->
-        <div class="dress">
-
-            <img src="0-02-05-00cc9a104dd8f612515a820953cf8207dbf510a72167ada8f8d76788e0b6c548_6f112d7f.jpg" alt="Платье макраме">
-
-            <div class="dress-info">
-
-                <h3>Панно «Ялинка»</h3>
-
-                <p class="description">
-                    Новорічне панно.
-                    В наявності
-                </p>
-
-                <div class="price">
-                    5 000 грн
-                </div>
-
-                <a
-                    class="order"
-                    href="panno1/panno1/panno1.html"
-                    target="_blank">
-                    Дивитись 
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- ПЛАТЬЕ №3 -->
-        <div class="dress">
-
-            <img src="file_00000000c39881f4968a11e61a5c70db.png" alt="Белое платье макраме">
-
-            <div class="dress-info">
-
-                <h3>Абажур «Indigo»</h3>
-
-                <p class="description">
-                    Абажур з бахромой з бавовняного шнура
-                    та з алюмінієвим ободом
-                </p>
-
-                <div class="price">
-                    3 000 грн
-                </div>
-
-                <a
-                    class="order"
-                    href="Lystry3.html"
-                    target="_blank">
-                    Дивитись
-                </a>
-
-            </div>
-        </div>
-        
-        <!-- ПЛАТЬЕ №4 -->
-        <div class="dress">
-
-            <img src="file_00000000ca88720a937ff5626541e425.png" alt="Белое платье макраме">
-
-            <div class="dress-info">
-
-                <h3>Абажур «Spіral»</h3>
-
-                <p class="description">
-                    Абажур в бордовому кольорі
-                    під замовлення можна обрати будь-який колір і розмір
-                </p>
-
-                <div class="price">
-                    від 3 000 грн
-                </div>
-
-                <a
-                    class="order"
-                    href="Lustry4.html"
-                    target="_blank">
-                    Дивитись
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-</div>
 
 <footer>
-    © 2026 Macra_me.ua
+    Macra_me.ua · Handmade macramé 🤍
 </footer>
 
+
+<script>
+
+    function changePhoto(photo) {
+        document.getElementById("mainPhoto").src = photo.src;
+    }
+
+</script>
+
 </body>
-</html>
-
-
-    </div>
-</div>
+              </html>
