@@ -1,1 +1,327 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Макраме сукні | Macra_me.ua</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
+            color: #5d5148;
+        }
+
+        /* Верхняя часть */
+        header {
+            background: #e7dcd2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 12px;
+            color: #806b5a;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        /* Основной блок */
+        .product {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        /* Галерея */
+        .gallery {
+            width: 100%;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(80, 60, 40, 0.12);
+        }
+
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .photos img:hover {
+            border-color: #a67c52;
+            transform: scale(1.03);
+        }
+
+        /* Описание */
+        .description {
+            padding: 10px 5px;
+        }
+
+        .description h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: normal;
+            color: #715b4b;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #8b7868;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .info {
+            background: #eee5dc;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info p {
+            margin: 9px 0;
+            font-size: 16px;
+        }
+
+        .info strong {
+            color: #6c594a;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #665b53;
+        }
+
+        /* Кнопка */
+        .order {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: #a67c52;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .order:hover {
+            background: #896542;
+            transform: translateY(-2px);
+        }
+
+        /* Нижняя часть */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            background: #e7dcd2;
+            color: #806b5a;
+        }
+
+        /* Телефон */
+        @media (max-width: 750px) {
+
+            .product {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .main-photo {
+                height: 400px;
+            }
+
+            .description h1 {
+                font-size: 30px;
+            }
+
+            .photos img {
+                height: 75px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Macra_me.ua 🐚</div>
+
+    <a href="sukni.html" class="back">
+        ← Назад до суконь
+    </a>
+</header>
+
+
+<main class="product">
+
+    <!-- ФОТО -->
+    <div class="gallery">
+
+        <!-- ГЛАВНОЕ ФОТО -->
+        <img
+            id="mainPhoto"
+            class="main-photo"
+            src="0-02-05-2cd02b518187314161f17737c8f9206ff72c4bc9d16bec3866557845b8f35613_a16b0bd0.jpg"
+            alt="Макраме люстра"
+        >
+
+        <!-- МИНИАТЮРЫ -->
+        <div class="photos">
+
+            <img
+                src="0-02-05-2cd02b518187314161f17737c8f9206ff72c4bc9d16bec3866557845b8f35613_a16b0bd0.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-35ba37c420feba4cae96c9dd4ad3836f7fb7c89df7f3967aa6a22098043ff937_9edd0e0b.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-0e7cba4ea5f4a7c96cd74ed9b4221b814a7ea0b72383cfe1305c17ba5ba9beb2_cd92e3c2.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-291c3aad5509626bac3c87bd18564a7a02ddf130b3353a65263f68a554d6eca6_8bf5dea9.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+        </div>
+    </div>
+
+
+    <!-- ОПИСАНИЕ -->
+    <div class="description">
+
+        <h1>Сукня макраме</h1>
+
+        <p class="subtitle">
+            Стильне сукня ручної роботи, створена з любов'ю
+            та увагою до кожної деталі 🤍
+        </p>
+
+        <div class="price">
+            Ціна: від 2 200 грн
+        </div>
+
+        <div class="info">
+
+            <p>
+                <strong>Матеріал:</strong>
+                на вибір
+            </p>
+
+            <p>
+                <strong>Колір:</strong>
+                на вибір
+            </p>
+
+            <p>
+                <strong>Розмір:</strong>
+              XS,S,М
+            </p>
+
+            <p>
+                <strong>Виготовлення:</strong>
+                Під замовлення
+            </p>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+               Плетена пляжна сукня ручної роботи з довгою бахромою. Виконана з приємної до тіла плетененої нитки бежевого відтінку. 
+                Ідеально підкреслює силует та створює витончений, розслаблений образ для пляжу, відпочинку біля басейну або фотосесії.
+            </p>
+
+            <p>
+                Підійде для відпочинку на морі, біля басейну або фотосесії.
+            </p>
+
+            <p>
+                Можливе виготовлення в іншому розмірі
+                та кольорі за вашим бажанням.
+            </p>
+
+        </div>
+
+        <a href="https://www.instagram.com/macra_me.ua?stkn=MWhuMzBsMmU0c2R2dg==" class="order">
+            Замовити
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+    Macra_me.ua · Handmade macramé 🤍
+</footer>
+
+
+<script>
+
+    function changePhoto(photo) {
+        document.getElementById("mainPhoto").src = photo.src;
+    }
+
+</script>
+
+</body>
+              </html>
