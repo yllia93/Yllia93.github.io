@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Аксесуари та декор | Macra_me.ua</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1eb;
+            color: #5d5148;
+        }
+
+        /* Верхняя часть */
+        header {
+            background: #e7dcd2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 12px;
+            color: #806b5a;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        /* Основной блок */
+        .product {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        /* Галерея */
+        .gallery {
+            width: 100%;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(80, 60, 40, 0.12);
+        }
+
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .photos img:hover {
+            border-color: #a67c52;
+            transform: scale(1.03);
+        }
+
+        /* Описание */
+        .description {
+            padding: 10px 5px;
+        }
+
+        .description h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: normal;
+            color: #715b4b;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #8b7868;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #a67c52;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .info {
+            background: #eee5dc;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info p {
+            margin: 9px 0;
+            font-size: 16px;
+        }
+
+        .info strong {
+            color: #6c594a;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #665b53;
+        }
+
+        /* Кнопка */
+        .order {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: #a67c52;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .order:hover {
+            background: #896542;
+            transform: translateY(-2px);
+        }
+
+        /* Нижняя часть */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            background: #e7dcd2;
+            color: #806b5a;
+        }
+
+        /* Телефон */
+        @media (max-width: 750px) {
+
+            .product {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .main-photo {
+                height: 400px;
+            }
+
+            .description h1 {
+                font-size: 30px;
+            }
+
+            .photos img {
+                height: 75px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Macra_me.ua 🐚</div>
+
+    <a href="decor.html" class="back">
+        ← Назад до аксесуарів
+    </a>
+</header>
+
+
+<main class="product">
+
+    <!-- ФОТО -->
+    <div class="gallery">
+
+        <!-- ГЛАВНОЕ ФОТО -->
+        <img
+            id="mainPhoto"
+            class="main-photo"
+            src="0-02-05-b1085ad0e76e744e2cf66b0aea4daeed5818148c47554ac0d58758563d45230d_2c93b805.jpg"
+            alt="Макраме люстра"
+        >
+
+        <!-- МИНИАТЮРЫ -->
+        <div class="photos">
+
+            <img
+                src="0-02-05-b1085ad0e76e744e2cf66b0aea4daeed5818148c47554ac0d58758563d45230d_2c93b805.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-ba134bb5a6a9d965bb80415bdce93cf7526941f3f450d0ed14ee47756505a3ca_4b356bf.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-c164f1e8132b8357a2b28cfa2788d8a6919db14f36605200141bdf38faba3bfa_1d8082df.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+            <img
+                src="0-02-05-f52f1ad88953f42f15af5972aa3fd76a949999b3cff44623ccd925e28648777c_ee3c9fa.jpg"
+                alt="Макраме люстра"
+                onclick="changePhoto(this)"
+            >
+
+        </div>
+    </div>
+
+
+    <!-- ОПИСАНИЕ -->
+    <div class="description">
+
+        <h1>Макраме брошка</h1>
+
+        <p class="subtitle">
+            Брошка ручної роботи, створена з любов'ю
+            та увагою до кожної деталі 🤍
+        </p>
+
+        <div class="price">
+            Ціна: 300 грн
+        </div>
+
+        <div class="info">
+
+            <p>
+                <strong>Матеріал:</strong>
+                поліефірний шнур
+            </p>
+
+            <p>
+                <strong>Колір:</strong>
+                червоний
+            </p>
+
+            <p>
+                <strong>Розмір:</strong>
+              7см*6см
+            </p>
+
+            <p>
+                <strong>Виготовлення:</strong>
+                В наявності
+            </p>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+                Кохання у кожній петельці.Плетене червоне серце
+              з ніжною бахромою, наче символ любові, що тече зсередини. Справжня ручна робота, яка додає особливого шарму. 
+            </p>
+
+            <p>
+              Додасть особливого шарму вашому одягу .
+            </p>
+
+            <p>
+                Можливе виготовлення в іншому розмірі
+                та кольорі за вашим бажанням.
+            </p>
+
+        </div>
+
+        <a href="https://www.instagram.com/macra_me.ua?stkn=MWhuMzBsMmU0c2R2dg==" class="order">
+            Замовити
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+    Macra_me.ua · Handmade macramé 🤍
+</footer>
+
+
+<script>
+
+    function changePhoto(photo) {
+        document.getElementById("mainPhoto").src = photo.src;
+    }
+
+</script>
+
+</body>
+              </html>
