@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://yllia93.github.io/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <url>
+    <loc>https://yllia93.github.io/</loc>
+  </url>
 
-    <url>
-        <loc>https://yllia93.github.io/decor.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://yllia93.github.io/lustry.html</loc>
+  </url>
 
-    <url>
-        <loc>https://yllia93.github.io/lustry.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://yllia93.github.io/panno.html</loc>
+  </url>
 
-    <url>
-        <loc>https://yllia93.github.io/panno.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://yllia93.github.io/sukni.html</loc>
+  </url>
 
-    <url>
-        <loc>https://yllia93.github.io/sukni.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://yllia93.github.io/decor.html</loc>
+  </url>
+
+  <url>
+    <loc>https://yllia93.github.io/lystry1.html</loc>
+  </url>
 
 </urlset>
